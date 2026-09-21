@@ -1,0 +1,626 @@
+:root {
+  --cor-fundo-pagina: #fbf8f5; /* Define a cor de fundo bege clara da página */
+  --cor-fundo-card: #ffffff; /* Define a cor branca de fundo para os cards */
+  --cor-fundo-suave: #f5f0eb; /* Define a cor creme suave para elementos secundários */
+  --cor-texto-principal: #3b2d26; /* Define a cor marrom escura principal do texto */
+  --cor-texto-suave: #6e5e54; /* Define a cor do texto secundário */
+  --cor-texto-categoria: #a65335; /* Define a cor terracota para as categorias e destaques */
+  --cor-destaque-marrom: #8b3a2b; /* Define a cor marrom avermelhada dos botões */
+  --cor-destaque-hover: #6f2c20; /* Define a cor de hover para os botões */
+  --cor-borda: #ebe4dc; /* Define a cor clara das bordas dos cards e campos */
+  --fonte-titulo: 'Georgia', serif; /* Define a família de fontes serifada para os títulos */
+  --fonte-corpo: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Define a fonte padrão para o corpo da página */
+}
+
+* {
+  margin: 0; /* Remove as margens padrão de todos os elementos */
+  padding: 0; /* Remove o preenchimento padrão de todos os elementos */
+  box-sizing: border-box; /* Inclui borda e preenchimento no cálculo de largura e altura */
+}
+
+html {
+  scroll-behavior: smooth; /* Adiciona efeito de rolagem suave na página */
+}
+
+body {
+  font-family: var(--fonte-corpo); /* Aplica a fonte principal ao corpo da página */
+  background-color: var(--cor-fundo-pagina); /* Define a cor de fundo bege da página */
+  color: var(--cor-texto-principal); /* Define a cor marrom escura para os textos */
+  line-height: 1.6; /* Define o espaçamento entre linhas do texto */
+}
+
+/* --- CABEÇALHO --- */
+header {
+  text-align: center; /* Centraliza o conteúdo do cabeçalho */
+  padding: 40px 20px 20px 20px; /* Define o preenchimento superior e inferior do cabeçalho */
+  max-width: 900px; /* Define a largura máxima do cabeçalho */
+  margin: 0 auto; /* Centraliza o cabeçalho horizontalmente na tela */
+}
+
+header .slogan {
+  font-size: 11px; /* Define o tamanho pequeno da fonte do slogan */
+  text-transform: uppercase; /* Transforma o texto do slogan em letras maiúsculas */
+  letter-spacing: 2px; /* Adiciona espaçamento entre as letras do slogan */
+  color: var(--cor-texto-categoria); /* Aplica a cor terracota ao slogan */
+  margin-bottom: 8px; /* Adiciona espaçamento abaixo do slogan */
+  font-weight: 600; /* Define peso semi-negrito para o slogan */
+}
+
+header h1 {
+  font-family: var(--fonte-titulo); /* Aplica a fonte serifada ao título do site */
+  font-size: 42px; /* Define o tamanho grande da fonte do título principal */
+  font-weight: normal; /* Mantém o peso da fonte normal para elegância */
+  color: var(--cor-texto-principal); /* Define a cor do título principal */
+  margin-bottom: 24px; /* Adiciona espaçamento abaixo do título principal */
+}
+
+/* --- NAVEGAÇÃO --- */
+nav {
+  display: flex; /* Utiliza Flexbox para alinhar os links do menu */
+  justify-content: center; /* Centraliza os links do menu horizontalmente */
+  align-items: center; /* Alinha os links verticalmente ao centro */
+  gap: 24px; /* Adiciona espaçamento uniforme entre os links */
+  flex-wrap: wrap; /* Permite que os links quebrem linha se a tela for pequena */
+  padding-bottom: 16px; /* Define espaçamento inferior do menu */
+  border-bottom: 1px solid var(--cor-borda); /* Adiciona uma linha suave divisória abaixo do menu */
+}
+
+nav a {
+  text-decoration: none; /* Remove o sublinhado dos links */
+  color: var(--cor-texto-principal); /* Define a cor marrom dos links */
+  font-size: 14px; /* Define o tamanho da fonte dos links */
+  font-weight: 500; /* Define peso médio para o texto do link */
+  transition: color 0.2s ease; /* Adiciona transição suave para a troca de cor ao passar o mouse */
+}
+
+nav a:hover {
+  color: var(--cor-texto-categoria); /* Altera a cor do link para terracota ao passar o mouse */
+}
+
+/* --- CONTEÚDO PRINCIPAL --- */
+main {
+  max-width: 800px; /* Define a largura máxima do conteúdo principal */
+  margin: 40px auto; /* Centraliza o bloco principal e adiciona margem vertical */
+  padding: 0 20px; /* Adiciona espaçamento lateral interno */
+}
+
+section {
+  margin-bottom: 48px; /* Define espaçamento inferior entre cada seção da página */
+}
+
+.categoria {
+  font-size: 11px; /* Define tamanho pequeno da fonte para o nome da categoria */
+  text-transform: uppercase; /* Transforma o texto em letras maiúsculas */
+  letter-spacing: 2px; /* Espaça as letras da categoria */
+  color: var(--cor-texto-categoria); /* Aplica a cor terracota */
+  margin-bottom: 6px; /* Adiciona espaçamento abaixo da categoria */
+  font-weight: 600; /* Aplica peso semi-negrito */
+}
+
+h2 {
+  font-family: var(--fonte-titulo); /* Aplica a fonte serifada aos títulos H2 */
+  font-size: 28px; /* Define o tamanho da fonte dos títulos H2 */
+  font-weight: normal; /* Mantém o peso normal para a fonte serifada */
+  color: var(--cor-texto-principal); /* Define a cor do título H2 */
+  margin-bottom: 16px; /* Espaçamento abaixo do título H2 */
+}
+
+h3 {
+  font-family: var(--fonte-titulo); /* Aplica a fonte serifada aos títulos H3 */
+  font-size: 20px; /* Define o tamanho da fonte dos títulos H3 */
+  font-weight: normal; /* Mantém o peso normal */
+  color: var(--cor-texto-principal); /* Define a cor do título H3 */
+  margin-bottom: 8px; /* Espaçamento abaixo do título H3 */
+}
+
+p {
+  color: var(--cor-texto-suave); /* Define a cor dos parágrafos */
+  font-size: 15px; /* Define o tamanho da fonte dos parágrafos */
+  margin-bottom: 16px; /* Adiciona espaçamento abaixo dos parágrafos */
+}
+
+/* --- BOTÕES E LINKS --- */
+.botao,
+button[type="submit"] {
+  display: inline-block; /* Permite definir dimensões e espaçamento no botão */
+  background-color: var(--cor-destaque-marrom); /* Define a cor de fundo marrom do botão */
+  color: #ffffff; /* Define o texto do botão como branco */
+  padding: 10px 20px; /* Define o preenchimento interno do botão */
+  border-radius: 4px; /* Arredonda levemente os cantos do botão */
+  text-decoration: none; /* Remove o sublinhado em links com classe botão */
+  font-size: 14px; /* Define o tamanho da fonte do botão */
+  font-weight: 600; /* Define texto em negrito */
+  border: none; /* Remove a borda padrão do botão */
+  cursor: pointer; /* Define o ponteiro de clique ao passar o mouse */
+  transition: background-color 0.2s ease; /* Adiciona transição suave para a cor de fundo */
+}
+
+.botao:hover,
+button[type="submit"]:hover {
+  background-color: var(--cor-destaque-hover); /* Altera a cor de fundo ao passar o mouse */
+}
+
+button[type="reset"] {
+  display: inline-block; /* Exibe o botão de limpar alinhado */
+  background-color: var(--cor-destaque-marrom); /* Mantém o padrão marrom do botão */
+  color: #ffffff; /* Texto em cor branca */
+  padding: 10px 20px; /* Preenchimento interno do botão */
+  border-radius: 4px; /* Cantos levemente arredondados */
+  font-size: 14px; /* Tamanho da fonte do botão */
+  font-weight: 600; /* Texto em negrito */
+  border: none; /* Remove a borda do botão */
+  cursor: pointer; /* Cursor de clique */
+  margin-right: 8px; /* Adiciona espaçamento à direita do botão de limpar */
+}
+
+/* --- SEÇÃO INÍCIO (HERO HOME) --- */
+#inicio {
+  display: flex; /* Exibe os blocos lado a lado em telas maiores */
+  align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+  gap: 32px; /* Adiciona espaçamento entre o texto e a imagem */
+}
+
+#inicio article {
+  flex: 1; /* Faz o artigo ocupar metade da largura total */
+}
+
+#inicio figure {
+  flex: 1; /* Faz a figura ocupar metade da largura total */
+  margin: 0; /* Zera a margem padrão da figura */
+}
+
+#inicio figure img {
+  width: 100%; /* Ocupa toda a largura do contêiner */
+  border-radius: 8px; /* Arredonda as bordas da imagem */
+  object-fit: cover; /* Ajusta a imagem sem distorcê-la */
+}
+
+/* --- SEÇÃO ESCOLHAS (RECEITAS DA SEMANA) --- */
+#escolhas {
+  display: flex; /* Usa Flexbox para estruturar o bloco de receitas da semana */
+  flex-wrap: wrap; /* Permite quebrar linha para os cards de receitas */
+  gap: 24px; /* Espaçamento entre os cards */
+}
+
+#escolhas header {
+  width: 100%; /* Faz o cabeçalho da seção ocupar toda a largura */
+  padding: 0; /* Remove preenchimentos extras do cabeçalho */
+  text-align: center; /* Centraliza o título da seção */
+  margin-bottom: 12px; /* Espaçamento inferior do cabeçalho */
+}
+
+#escolhas article {
+  flex: 1; /* Faz os dois cards dividirem o espaço igualmente */
+  min-width: 280px; /* Garante uma largura mínima antes de quebrar linha */
+}
+
+#escolhas figure {
+  margin: 0 0 12px 0; /* Espaçamento inferior da figura do card */
+}
+
+#escolhas figure img {
+  width: 100%; /* Largura total da imagem do card */
+  height: 220px; /* Altura fixa para manter uniformidade entre os cards */
+  object-fit: cover; /* Recorta a imagem para preencher o espaço proporcionalmente */
+  border-radius: 8px; /* Arredonda as bordas da imagem */
+}
+
+#escolhas figure figcaption {
+  font-size: 12px; /* Define tamanho pequeno para a legenda */
+  color: var(--cor-texto-suave); /* Cor suave do texto da legenda */
+  margin-top: 4px; /* Espaçamento acima da legenda */
+}
+
+#escolhas a {
+  color: var(--cor-texto-categoria); /* Define cor terracota nos links das receitas */
+  text-decoration: none; /* Remove sublinhado */
+  font-size: 14px; /* Tamanho da fonte do link */
+  font-weight: 600; /* Define texto semi-negrito */
+}
+
+#escolhas a:hover {
+  text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* --- MANIFESTO --- */
+#manifesto blockquote {
+  background-color: var(--cor-fundo-suave); /* Define fundo suave para o bloco de citação */
+  border-radius: 8px; /* Arredonda as bordas do card do manifesto */
+  padding: 32px 24px; /* Preenchimento interno do card */
+  text-align: center; /* Centraliza o texto da citação */
+  font-family: var(--fonte-titulo); /* Aplica a fonte serifada à citação */
+  font-size: 20px; /* Define o tamanho da fonte da citação */
+  font-style: italic; /* Aplica estilo itálico no texto da citação */
+  color: var(--cor-texto-principal); /* Define a cor do texto da citação */
+}
+
+/* --- DICAS HOME --- */
+#dicas-home {
+  display: flex; /* Exibe o artigo e o aside lado a lado */
+  gap: 24px; /* Espaçamento entre as caixas de dicas */
+  align-items: stretch; /* Faz ambos os blocos terem a mesma altura */
+}
+
+#dicas-home article {
+  flex: 2; /* Faz o artigo ocupar duas partes do espaço */
+}
+
+#dicas-home aside {
+  flex: 1; /* Faz o aside ocupar uma parte do espaço */
+  background-color: var(--cor-fundo-card); /* Fundo branco do card de dica rápida */
+  border: 1px solid var(--cor-borda); /* Borda suave do card de dica rápida */
+  padding: 20px; /* Preenchimento interno */
+  border-radius: 8px; /* Arredonda as bordas */
+}
+
+#dicas-home a {
+  color: var(--cor-texto-categoria); /* Define cor terracota no link */
+  text-decoration: none; /* Remove sublinhado */
+  font-weight: 600; /* Texto em negrito */
+  font-size: 14px; /* Tamanho da fonte */
+}
+
+/* --- NEWSLETTER --- */
+#newsletter {
+  background-color: var(--cor-fundo-card); /* Fundo branco para a caixa da newsletter */
+  border: 1px solid var(--cor-borda); /* Borda suave ao redor da caixa */
+  padding: 32px; /* Preenchimento interno */
+  border-radius: 8px; /* Cantos arredondados */
+  text-align: center; /* Centraliza o conteúdo da newsletter */
+}
+
+#newsletter header {
+  padding: 0; /* Zera os espaçamentos do cabeçalho da newsletter */
+  margin-bottom: 16px; /* Adiciona espaçamento inferior */
+}
+
+#newsletter form {
+  display: flex; /* Exibe os campos de entrada e botão na mesma linha */
+  justify-content: center; /* Centraliza os elementos no formulário */
+  align-items: center; /* Alinha o campo e o botão verticalmente */
+  gap: 12px; /* Espaçamento entre o campo de texto e o botão */
+  flex-wrap: wrap; /* Quebra linha se faltar espaço */
+}
+
+#newsletter label {
+  font-size: 14px; /* Tamanho da fonte do rótulo do e-mail */
+  font-weight: 600; /* Texto em negrito */
+}
+
+#newsletter input[type="email"] {
+  padding: 10px 14px; /* Preenchimento interno do campo de e-mail */
+  border: 1px solid var(--cor-borda); /* Borda suave no campo de e-mail */
+  border-radius: 4px; /* Cantos arredondados */
+  font-size: 14px; /* Tamanho da fonte dentro do campo */
+  min-width: 260px; /* Largura mínima do campo de entrada */
+  outline: none; /* Remove o contorno padrão do navegador */
+}
+
+/* --- PÁGINA DE RECEITAS (LISTAGEM) --- */
+.card-horizontal {
+  display: flex; /* Coloca a imagem e as informações lado a lado */
+  background-color: var(--cor-fundo-card); /* Fundo branco do card da receita */
+  border: 1px solid var(--cor-borda); /* Borda suave no card */
+  border-radius: 8px; /* Cantos arredondados do card */
+  overflow: hidden; /* Corta imagens que ultrapassem o limite do card */
+  margin-bottom: 20px; /* Espaçamento inferior entre cada card da lista */
+}
+
+.card-horizontal-img {
+  width: 220px; /* Define largura fixa da imagem do card */
+  height: 160px; /* Define altura fixa da imagem */
+  object-fit: cover; /* Recorta a imagem sem distorcer para preencher a caixa */
+}
+
+.card-horizontal-content {
+  padding: 20px; /* Preenchimento interno do conteúdo do card */
+  display: flex; /* Flexbox para organizar os textos verticalmente */
+  flex-direction: column; /* Organiza os elementos em coluna */
+  justify-content: center; /* Centraliza o conteúdo verticalmente */
+  flex: 1; /* Preenche a largura restante da linha */
+}
+
+.card-meta {
+  display: flex; /* Alinha o ícone de relógio e o tempo na mesma linha */
+  align-items: center; /* Alinha ícone e texto verticalmente */
+  gap: 6px; /* Espaço entre o ícone e o texto */
+  font-size: 13px; /* Tamanho da fonte da informação de tempo */
+  color: var(--cor-texto-suave); /* Cor suave do texto de tempo */
+  margin-bottom: 8px; /* Espaçamento inferior da metainformação */
+}
+
+.card-meta .material-symbols-outlined {
+  font-size: 18px; /* Define o tamanho do ícone do Google Material Symbols */
+}
+
+.card-link {
+  color: var(--cor-texto-categoria); /* Cor terracota do link de abrir receita */
+  text-decoration: none; /* Remove o sublinhado do link */
+  font-weight: 600; /* Texto do link em negrito */
+  font-size: 14px; /* Tamanho da fonte do link */
+}
+
+.card-link:hover {
+  text-decoration: underline; /* Sublinha o link ao passar o mouse */
+}
+
+/* --- PÁGINA DE RECEITA DETALHADA (BOLO / MASSA) --- */
+.pagina-receita header {
+  padding: 0; /* Zera os espaçamentos internos do cabeçalho da receita */
+  text-align: center; /* Centraliza o título da receita */
+  margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+.pagina-receita figure {
+  text-align: center; /* Centraliza a figura e a legenda */
+  margin-bottom: 32px; /* Espaçamento abaixo da imagem da receita */
+}
+
+.pagina-receita figure img {
+  max-width: 100%; /* Limita a largura da imagem ao tamanho da tela */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 8px; /* Arredonda as bordas da imagem principal */
+}
+
+.pagina-receita figure figcaption {
+  font-size: 13px; /* Tamanho pequeno para a legenda da imagem */
+  color: var(--cor-texto-suave); /* Cor do texto da legenda */
+  margin-top: 8px; /* Espaçamento acima da legenda */
+}
+
+.receita-cards-container {
+  display: flex; /* Empilha os cards da receita verticalmente */
+  flex-direction: column; /* Define direção em coluna */
+  gap: 16px; /* Espaçamento entre os blocos da receita */
+}
+
+.receita-card-box {
+  background-color: var(--cor-fundo-card); /* Fundo branco dos blocos de detalhes */
+  border: 1px solid var(--cor-borda); /* Borda suave dos blocos */
+  border-radius: 8px; /* Cantos arredondados */
+  padding: 16px 20px; /* Preenchimento interno */
+}
+
+.info-header {
+  display: flex; /* Alinha o ícone e o título de informações lado a lado */
+  align-items: center; /* Alinha verticalmente ícone e título */
+  gap: 12px; /* Espaço entre ícone e grupo de título */
+  margin-bottom: 12px; /* Espaçamento inferior */
+}
+
+.receita-card-icon {
+  background-color: var(--cor-fundo-suave); /* Fundo suave da bolinha do ícone */
+  width: 40px; /* Largura da bolinha do ícone */
+  height: 40px; /* Altura da bolinha do ícone */
+  border-radius: 50%; /* Transforma a caixa em um círculo perfeito */
+  display: flex; /* Flexbox para centralizar o ícone */
+  align-items: center; /* Centraliza verticalmente o ícone */
+  justify-content: center; /* Centraliza horizontalmente o ícone */
+  color: var(--cor-texto-principal); /* Cor do ícone */
+}
+
+.receita-card-title-group {
+  display: flex; /* Empilha o título e subtítulo do card */
+  flex-direction: column; /* Direção em coluna */
+}
+
+.receita-card-title {
+  font-weight: 700; /* Texto do título do bloco em negrito */
+  font-size: 16px; /* Tamanho da fonte do título */
+  color: var(--cor-texto-principal); /* Cor do título */
+}
+
+.receita-card-subtitle {
+  font-size: 13px; /* Tamanho do subtítulo explicativo */
+  color: var(--cor-texto-suave); /* Cor suave do subtítulo */
+}
+
+.info-bar-horizontal {
+  list-style: none; /* Remove marcadores da lista de informações */
+  display: flex; /* Exibe as informações (tempo, porções, dificuldade) em linha */
+  gap: 24px; /* Espaçamento entre cada item de informação */
+  padding-top: 12px; /* Espaçamento superior da barra de informações */
+  border-top: 1px solid var(--cor-borda); /* Linha divisória acima da barra de informações */
+}
+
+.info-bar-item {
+  display: flex; /* Alinha o ícone e a informação na mesma linha */
+  align-items: center; /* Alinha o ícone e o texto verticalmente */
+  gap: 6px; /* Espaçamento entre o ícone e o texto */
+  font-size: 14px; /* Tamanho da fonte das informações */
+  color: var(--cor-texto-suave); /* Cor do texto das informações */
+}
+
+.info-bar-item .material-symbols-outlined {
+  font-size: 20px; /* Tamanho do ícone das informações */
+}
+
+details.receita-card-box summary {
+  cursor: pointer; /* Define cursor interativo de clique para expandir o conteúdo */
+  display: flex; /* Alinha os elementos do cabeçalho do details */
+  align-items: center; /* Alinha ícone e título verticalmente */
+  gap: 12px; /* Espaçamento entre o ícone e o título */
+  list-style: none; /* Remove a seta padrão de expansão em alguns navegadores */
+}
+
+details.receita-card-box summary::-webkit-details-marker {
+  display: none; /* Remove a seta padrão de expansão no Chrome/Safari */
+}
+
+.receita-card-content {
+  padding-top: 16px; /* Espaçamento interno superior para o conteúdo expandido */
+  margin-top: 12px; /* Margem superior separando o título do conteúdo */
+  border-top: 1px solid var(--cor-borda); /* Linha divisória acima do conteúdo expandido */
+}
+
+.receita-card-content ul,
+.receita-card-content ol {
+  padding-left: 20px; /* Adiciona recuo à esquerda para as listas de ingredientes e preparo */
+  color: var(--cor-texto-suave); /* Cor do texto dos itens das listas */
+  font-size: 15px; /* Tamanho da fonte dos itens */
+}
+
+.receita-card-content li {
+  margin-bottom: 8px; /* Espaçamento inferior entre cada ingrediente ou passo do preparo */
+}
+
+/* --- PÁGINA DE DICAS --- */
+.dica-cards-container {
+  display: flex; /* Empilha os cards de dicas em coluna */
+  flex-direction: column; /* Direção em coluna */
+  gap: 16px; /* Espaçamento entre cada card de dica */
+}
+
+.dica-card-horizontal {
+  display: flex; /* Coloca o ícone e o texto lado a lado */
+  background-color: var(--cor-fundo-card); /* Fundo branco para o card de dica */
+  border: 1px solid var(--cor-borda); /* Borda suave no card de dica */
+  border-radius: 8px; /* Cantos arredondados */
+  overflow: hidden; /* Corta cantos do elemento filho que ultrapassem o limite */
+}
+
+.dica-card-icon-wrapper {
+  background-color: var(--cor-fundo-suave); /* Fundo bege suave para o bloco do ícone */
+  width: 72px; /* Largura fixa da caixa do ícone */
+  display: flex; /* Flexbox para centralizar o ícone */
+  align-items: center; /* Centraliza verticalmente o ícone */
+  justify-content: center; /* Centraliza horizontalmente o ícone */
+  margin: 0; /* Zera margens da figura do ícone */
+  color: var(--cor-texto-principal); /* Cor do ícone */
+}
+
+.dica-card-content {
+  padding: 16px 20px; /* Preenchimento interno do texto da dica */
+  flex: 1; /* Ocupa a largura restante do card */
+}
+
+.dica-card-content h2 {
+  font-size: 18px; /* Tamanho da fonte do título da dica */
+  margin-bottom: 4px; /* Espaçamento abaixo do título */
+}
+
+.dica-card-content p {
+  margin-bottom: 0; /* Zera a margem inferior do texto da dica */
+  font-size: 14px; /* Tamanho da fonte do texto da dica */
+}
+
+.video-card-horizontal {
+  background-color: var(--cor-fundo-card); /* Fundo branco do card de vídeo */
+  border: 1px solid var(--cor-borda); /* Borda suave no card */
+  border-radius: 8px; /* Cantos arredondados */
+  padding: 20px; /* Preenchimento interno */
+}
+
+.video-card-horizontal iframe {
+  width: 100%; /* Faz o vídeo incorporado ocupar toda a largura disponível */
+  aspect-ratio: 16 / 9; /* Mantém a proporção widescreen 16:9 do vídeo */
+  height: auto; /* Ajusta a altura automaticamente conforme a largura */
+  border-radius: 6px; /* Arredonda as bordas do iframe do vídeo */
+  border: none; /* Remove a borda padrão do iframe */
+}
+
+/* --- PÁGINA DE CONTATO --- */
+.text-center {
+  text-align: center; /* Centraliza o texto explicativo da página de contato */
+  margin-bottom: 24px; /* Espaçamento inferior */
+}
+
+fieldset {
+  border: 1px solid var(--cor-borda); /* Define borda suave ao redor do agrupamento de campos */
+  border-radius: 6px; /* Cantos levemente arredondados no fieldset */
+  padding: 20px; /* Preenchimento interno do fieldset */
+  margin-bottom: 20px; /* Espaçamento abaixo de cada fieldset */
+  background-color: var(--cor-fundo-card); /* Fundo branco do fieldset */
+}
+
+legend {
+  padding: 0 8px; /* Preenchimento lateral do texto da legenda do fieldset */
+  font-weight: 600; /* Texto em negrito */
+  font-size: 14px; /* Tamanho da fonte da legenda */
+  color: var(--cor-texto-categoria); /* Cor terracota para o título da legenda */
+}
+
+form label {
+  font-size: 14px; /* Tamanho da fonte dos rótulos dos campos */
+  font-weight: 600; /* Texto em negrito */
+  color: var(--cor-texto-principal); /* Cor do texto do rótulo */
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select,
+form textarea {
+  width: 100%; /* Faz os campos de texto ocuparem 100% da largura do contêiner */
+  padding: 10px; /* Preenchimento interno dos campos */
+  border: 1px solid var(--cor-borda); /* Borda suave nos campos de formulário */
+  border-radius: 4px; /* Cantos levemente arredondados */
+  font-size: 14px; /* Tamanho da fonte digitada nos campos */
+  font-family: inherit; /* Herda a mesma fonte do restante da página */
+  margin-top: 4px; /* Espaçamento acima do campo em relação ao rótulo */
+  outline: none; /* Remove o contorno padrão de foco do navegador */
+  background-color: #ffffff; /* Define o fundo branco nos campos */
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="tel"]:focus,
+form select:focus,
+form textarea:focus {
+  border-color: var(--cor-texto-categoria); /* Muda a cor da borda para terracota ao focar */
+}
+
+/* --- RODAPÉ --- */
+footer {
+  text-align: center; /* Centraliza o texto do rodapé */
+  padding: 32px 20px; /* Preenchimento interno do rodapé */
+  border-top: 1px solid var(--cor-borda); /* Linha divisória superior do rodapé */
+  margin-top: 60px; /* Espaçamento acima do rodapé */
+  font-size: 13px; /* Tamanho reduzido para o texto do rodapé */
+  color: var(--cor-texto-suave); /* Cor do texto do rodapé */
+}
+
+footer address {
+  font-style: normal; /* Remove o estilo itálico padrão da tag address */
+  margin: 8px 0; /* Espaçamento superior e inferior do endereço */
+}
+
+/* --- ADAPTAÇÃO MOBILE --- */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 32px; /* Reduz o tamanho do título principal no celular */
+  }
+
+  nav {
+    gap: 12px; /* Reduz o espaçamento entre os links no celular */
+  }
+
+  #inicio,
+  #dicas-home {
+    flex-direction: column; /* Empilha os blocos na vertical em telas pequenas */
+  }
+
+  .card-horizontal {
+    flex-direction: column; /* Empilha a imagem e o texto dos cards na vertical no celular */
+  }
+
+  .card-horizontal-img {
+    width: 100%; /* Imagem do card passa a ocupar 100% da largura no celular */
+    height: 180px; /* Altura ajustada para a exibição no celular */
+  }
+
+  .info-bar-horizontal {
+    flex-wrap: wrap; /* Permite que os itens da barra de informações quebrem linha */
+    gap: 12px; /* Espaçamento menor entre as informações */
+  }
+
+  #newsletter form {
+    flex-direction: column; /* Empilha o campo de e-mail e botão na vertical no celular */
+    width: 100%; /* Formulário ocupa toda a largura */
+  }
+
+  #newsletter input[type="email"] {
+    width: 100%; /* Campo de entrada passa a ocupar 100% da largura no celular */
+    min-width: 0; /* Reseta a largura mínima */
+  }
+}
